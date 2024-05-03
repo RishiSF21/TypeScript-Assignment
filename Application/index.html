@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="/dist/script.js"></script>
+    <title>Medical Store</title>
+</head>
+<body>
+
+  <div id="navigation">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Medical Store</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#home" onclick="DisplayHomePage()">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" onclick="SignInPage()">Sign In</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" onclick="SignUpPage()">Sign Up</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <div id="signIn-home">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Medical Store</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item ">
+            <a class="nav-link" href="#home" onclick="DisplayHomePage()">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" onclick="PurchasePage()">Purchase Medicine</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" onclick="MedicinePage()">Medicine Details</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" onclick="OrderPage()">Order History</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" onclick="CancelPage()">Cancel Order</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" onclick="RechargePage()">Recharge Wallet</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" onclick="ShowWalletPage()">Show Balance</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" onclick="DisplayHomePage()">Log Out</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+      <div id="home">
+        <h2 class="home-desc">Welcome To Apollo Pharmacy</h2>
+      </div>
+
+      <div id="signInPage">
+        <div class="form-content">
+            <h3>Sign In Page</h3>
+            <form>
+                <label class="lbl">Email:</label><input type="text" id="existingMailId" placeholder="Email ID" required><br><br>
+                <label class="lbl">Password:</label><input type="password" id="pass" placeholder="Password" required><br><br>
+                <button class="btn btn-danger" onclick="SignIn()">Sign In</button>
+            </form>
+            <label id="availableUser"></label>
+        </div>
+    </div>
+
+    <div id="signUpPage">
+        <h3>Sign Up Page</h3>
+        <label> Email : </label><br><input type="email" id="newUserEmail" ><label
+            id="newUserNameMessage"></label><br>
+        <label> Password : </label><br><input type="password" id="newUserPassword" ><label
+            id="newUserAgeMessage"></label><br>
+        <label> Confirm Password : </label><br><input type="password" id="newConfirmPassword" ><label
+        id="newUserAgeMessage"></label><br>
+        <label> Phone Number : </label><br><input type="number" id="newUserPhoneNumber"
+            ><label id="newUserPhoneNumberMessage"></label><br><br>
+
+        <button class="btn btn-danger" onclick="SignUp()">Sign Up</button><br><br>
+        <label id="registerMsg"></label>
+    </div>
+
+    <div id="medicinePage">
+
+        <h2>Medicine Page</h2>
+
+        <label id="greet"></label><button onclick="DisplayHomePage()">Go Home</button><br>
+
+        <!-- <button onclick="medicineListCheck()">Show Medicines</button><br> -->
+
+        <button type="button" id="addButton" class="btn btn-info" onclick="AddMedicine()">Add</button>
+        <form id="form">
+          <label for="name">Medicine Name:</label>
+          <input type="text" id="mname" name="name" required><br><br>
+
+          <label for="count">Quantity:</label>
+          <input type="number" id="mquantity" name="count" required><br><br>
+
+          <label for="amount">Price:</label>
+          <input type="number" id="mprice" name="amount" required><br><br>
+
+          <label for="expiry">Expiry Date:</label>
+          <input type="date" id="mexpirydate" name="expiry" required><br><br>
+          <button type="button" id="submitButtonMedicine" class="btn btn-secondary" onclick="ChangeMedicine()">Submit</button>
+          <button type="button" id="cancelButton" onclick="reset()" class="btn btn-danger">Cancel</button>
+        </form>
+
+        
+        
+        
+        <div id="showMedicineList"></div>
+
+    </div>
+
+    <div id="purchasePage">
+      
+    </div>
+
+    <div id="textbox"></div>
+    <!-- <label id="purchaselbl">Enter Medicine Count</label><input type="number" id="purchaseCount"><br>
+    <button class="btn btn-primary" onclick="AddToCart()">Buy</button> -->
+    <div id="showbtn"></div>
+    <div id="purchaseMsg"></div>
+
+    <div id="orderPage">
+
+    </div>
+
+    <div id="recharge">
+      <label for="top-up">Enter Recharge Amount : </label><input type="number" id="topUp" class="topUp-textbox" placeholder="Enter Amount"><br><br>
+      <button class="btn btn-success" onclick="Recharge()">Top Up</button><br><br>
+      <div id="rechargeMsg"></div>
+    </div>
+
+    <div id="showWallet">
+      <h3>Wallet Balance</h3>
+      <span>Rs.<div id="balance"></div></span>
+    </div>
+
+    <div id="cancelPage"></div>
+    <div id="cancelmsg"></div>
+</body>
+</html>
