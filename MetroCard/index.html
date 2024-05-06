@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="dist/script.js"></script>
+    <title>CMRL</title>
+</head>
+<body>
+    <!-- Main Nav -->
+    <div id="navbar">
+        <div>
+            <strong class="brand">CMRL</strong>
+            <div class="links">
+                <button class="navbtns" id="home" onclick="DisplayHome()">Home</button>
+                <button class="navbtns" id="log-in" onclick="DisplaySignIn()">Sign In</button>
+                <button class="navbtns" id="register" onclick="DisplaySignUpPage()">Sign Up</button>
+            </div>
+        </div>
+        
+        <span class="clear"></span>
+    </div>
+
+    <!--Main Home-->
+    <div id="home-page">
+        <h2>! Welcome To Chennai Metro !</h2>
+    </div>
+
+    <!--Logged in navigation-->
+    <div id="navbar2">
+        <strong class="brand">CMRL</strong>
+        <div class="links">
+            <button class="navbtns3" id="home2" onclick="DisplayLoggedHomePage()">Home</button>
+            <button class="navbtns2" id="balanceCheck" onclick="DisplayBalancePage()">Balance Check</button>
+            <button class="navbtns2" id="rechage" onclick="RechargePage()">Recharge</button>
+            <button class="navbtns2" id="history" onclick="TravelHistoryPage()">Travel History</button>
+            <button class="navbtns2" id="travel1" onclick="TravelPage()">Travel</button>
+            <button class="navbtns3" id="logout" onclick="DisplayHome()">Log Out</button>
+        </div>
+        <span class="clear"></span>
+    </div>
+
+    <!--Logged in Home-->
+    <div id="loggedHome">
+        <strong>Welcome To Chennai Metro !</strong>
+        <div id="welcomeUser"></div>
+    </div>
+
+    <!--Sign In Page-->
+    <div id="signInForm">
+        <h3>Sign In Form</h3>
+
+        <label class="signInLbls">Email :</label><br><br>
+        <input type="email" id="signInMail" placeholder="Email"><br><br>
+
+        <label class="signInLbls">Password :</label><br><br>
+        <input type="password" id="signInPassword" placeholder="Password"><br><br>
+
+        <button class="loginBtn" onclick="SignIn()">
+            Sign In
+        </button>
+    </div>
+
+    <!--Sign Up Page-->
+    <div id="signUpForm">
+        <h3>User Registration</h3>
+
+        <label class="signUpLbls">Name :</label><br><br>
+        <input type="text" id="signUpName" placeholder="Enter your Name"><br><br>
+
+        <label class="signUpLbls">Email :</label><br><br>
+        <input type="email" id="signUpMail" placeholder="Enter your Mail ID"><br><br>
+
+        <label class="signUpLbls">Password :</label><br><br>
+        <input type="password" id="signUpPassword" placeholder="Password"><br><br>
+
+        <label class="signUpLbls">Phone No :</label><br><br>
+        <input type="number" id="signUpNumber" placeholder="Mobile No"><br><br>
+
+        <button class="registerBtn" onclick="SignUpResponse()">
+            Register
+        </button>
+
+        <!--Registration Success-->
+        <div id="registerMsg"></div>
+    </div>
+
+    <!--Balance Page-->
+    <div id="balance">
+        <div id="showBalance"></div>
+    </div>
+
+    <!--Recharge Page-->
+    <div id="recharge">
+        <div id="rechargeAmount">
+            <label>Enter Recharge Amount :</label><br><br>
+            <input type="number" id="amount"><br><br>
+            <button class="navbtns2" onclick="RechargeWallet()">Top-Up</button>
+            <div id="topUpMsg"></div>
+        </div>
+    </div>
+
+    <!--Travel History Page-->
+    <div id="trHistory">
+        <div id="travelHistory"></div>
+    </div>
+
+    <!--Travel Page-->
+    <div id="travel">
+        <div id="fairs"></div>
+        <div id="ticketMsg"></div>
+    </div>
+    
+</body>
+</html>
