@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="/dist/script.js"></script>
+    <title>Syncfusion Library</title>
+</head>
+<body>
+    <!-- Main Nav -->
+    <div id="navbar">
+        <div>
+            <strong class="brand">Syncfusion Library</strong>
+            <div class="links">
+                <button class="navbtns" id="home" onclick="DisplayHome()">Home</button>
+                <button class="navbtns" id="log-in" onclick="DisplaySignIn()">Sign In</button>
+                <button class="navbtns" id="register" onclick="DisplaySignUpPage()">Sign Up</button>
+            </div>
+        </div>
+        
+        <span class="clear"></span>
+    </div>
+
+    <!--Main Home-->
+    <div id="home-page">
+        <h2>! Welcome To Syncfusion Library !</h2>
+    </div>
+
+    <!--Logged in navigation-->
+    <div id="navbar2">
+        <strong class="brand">Syncfusion Library</strong>
+        <div class="links">
+            <button class="navbtns3" id="home2" onclick="DisplayLoggedHomePage()">Home</button>
+            <button class="navbtns2" id="bbook" onclick="BorrowBook()">Borrow Book</button>
+            <button class="navbtns2" id="bhistory" onclick="BorrowHistory()">Borrowed History</button>
+            <button class="navbtns2" id="return" onclick="GoToReturn()">Return Books</button>
+            <button class="navbtns2" id="recharge" onclick="WalletBalance()">Wallet Recharge</button>
+            <button class="navbtns3" id="logout" onclick="DisplayHome()">Log Out</button>
+        </div>
+        <span class="clear"></span>
+    </div>
+
+    <!--Logged in Home-->
+    <div id="loggedHome">
+        <strong>Welcome To Syncfusion Library !</strong>
+        <div id="welcomeUser"></div>
+    </div>
+
+    <!--Sign In Page-->
+    <div id="signInForm">
+        <h3>Sign In Form</h3>
+
+        <label class="signInLbls">Email :</label><br><br>
+        <input type="email" id="signInMail" placeholder="Email"><br><br>
+
+        <label class="signInLbls">Password :</label><br><br>
+        <input type="password" id="signInPassword" placeholder="Password"><br><br>
+
+        <button class="loginBtn" onclick="SignIn()">
+            Sign In
+        </button>
+    </div>
+
+    <!--Sign Up Page-->
+    <div id="signUpForm">
+        <h3>User Registration</h3>
+
+        <label class="signUpLbls">Name :</label><br><br>
+        <input type="text" id="signUpName" placeholder="Enter your Name"><br><br>
+
+        <label class="signUpLbls">Email :</label><br><br>
+        <input type="email" id="signUpMail" placeholder="Enter your Mail ID"><br><br>
+
+        <label class="signUpLbls">Password :</label><br><br>
+        <input type="password" id="signUpPassword" placeholder="Password"><br><br>
+
+        <label class="signUpLbls">Phone No :</label><br><br>
+        <input type="number" id="signUpNumber" placeholder="Mobile No"><br><br>
+
+        <button class="registerBtn" onclick="SignUpResponse()">
+            Register
+        </button><br>
+        <!--Registration Success-->
+        <div id="registerMsg"></div>
+    </div>
+
+    <!--Borrow Book-->
+    <div id="borrowPage" class="aligning"></div>
+    <div id="takeBook">
+        <br>
+        <em id="countBox">Enter Book Count: </em>
+        <input type="number" id="bookCountNo" placeholder="Number of Books">
+        <div id="showBookBtn"></div>
+    </div>
+
+    <!--Borrow History-->
+    <div id="history" class="aligning"></div>
+
+    <!--Return Book-->
+    <div id="returnBookPage" class="aligning">
+        
+    </div>
+    <div id="page4" class="aligning">
+        <em>Enter Book ID :</em>
+        <input type="number" id="bookIDBox" placeholder="Book ID">
+        <div id="showSubmitBtn"></div>
+    </div>
+
+    <!--Wallet Balance-->
+    <div id="balance" class="aligning">
+        <em>Enter Recharge Amount : </em>
+        <input type="number" id="topUp"><br><br>
+        <button id="topUpBtn" onclick="TopUp()">Top Up</button>
+    </div>
+</body>
+</html>
