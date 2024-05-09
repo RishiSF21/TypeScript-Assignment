@@ -1,0 +1,66 @@
+#signIn, #signUp{
+    display: none;
+    
+}
+#navhome{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#formContainer{
+    border: 1px solid black;
+    padding: 10px;
+}
+.mainBtns{
+    padding: 7px;
+    margin: 20px;
+    background-color: dodgerblue;
+    color: white;
+}
+#navbar{
+    float:  right;
+    display: none;
+}
+#clear{
+    clear: right;
+}
+.navBtns{
+    background-color: darkcyan;
+    color: whitesmoke;
+}
+#purchaseHistory{
+    display: none;
+    margin: 20vh;
+}
+#productsPage{
+    display: none;
+    margin-top: 100px;
+}
+#container1 .images img{
+    width: 250px;
+    height: 60%
+}
+#productsPage #container1{
+    display: flex;
+    flex-wrap: wrap;
+}
+#container1 .images{
+    margin: 20px;
+    padding: 20px;
+}
+#container1 .images button{
+    background-color: dodgerblue;
+    color: whitesmoke;
+}
+#productList{
+    display: none;
+}
+#productList img{
+    width: 250px;
+}
+#add{
+    display: none;
+}
+#addButton{
+    display: none;
+}

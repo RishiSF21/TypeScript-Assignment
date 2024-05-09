@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="/dist/script.js"></script>
+    <title>Grocery Store</title>
+</head>
+<body>
+    <!--Main Home-->
+    <div id="welcome">
+        <h3>Grocery Store</h3>
+    </div>
+
+    <!--Sign In and Sign Up-->
+    <div id="navhome">
+        
+        <div id="formContainer">
+            <button id="signInBtn" onclick="DisplaySignIn()" class="mainBtns">Sign In</button>
+            <button id="signUpBtn" onclick="DisplaySignUp()" class="mainBtns">Sign Up</button>
+            <div id="signIn">
+                <label>Email  ID : </label><br><br>
+                <input type="email" id="mail"><br><br>
+
+                <label>Password : </label><br><br>
+                <input type="password" id="password"><br><br>
+
+                <button id="loginBtn" onclick="SignIn()">Login</button>
+            </div>
+            <div id="signUp">
+                <label>Name : </label><br><br>
+                <input type="text" id="name"><br><br>
+
+                <label>Email  ID : </label><br><br>
+                <input type="email" id="signUpMail"><br><br>
+
+                <label>Password : </label><br><br>
+                <input type="password" id="signUpPassword"><br><br>
+
+                <label>Gender : </label><br><br>
+                <input type="text" id="signUpGender"><br><br>
+
+                <label>Mobile Number : </label><br><br>
+                <input type="number" id="mobile"><br><br>
+
+                <label>Profile Photo : </label><br><br>
+                <input type="file" id="profilePic"><br><br>
+
+                <button id="registerBtn" onclick="SignUp()">Register</button>
+            </div>
+        </div>
+    </div>
+
+    <!--Logged HomePage-->
+    
+    <div id="navbar">
+        <button class="navBtns" onclick="">Home</button>
+        <button class="navBtns" onclick="ShowProducts()">Show Products</button>
+        <button class="navBtns" onclick="ProductDetails()">Buy Product</button>
+        <button class="navBtns" onclick="PurchaseDetails1()">Purchase Details</button>
+        <button class="navBtns" onclick="">Log Out</button>
+    </div>
+    <span id="clear"></span>
+
+    <!--Show Products-->
+   
+    <div id="add">
+        <input type="number" id="pid" placeholder="Product ID">
+        <input type="text" id="pname" placeholder="Product Name">
+        <input type="number" id="pqty" placeholder="Quantity">
+        <input type="number" id="pprice" placeholder="Unit Price">
+        <label>Expiry Date </label>
+        <input type="date" id="pdate" placeholder="Expiry Date">
+        <label>Product Image :</label>
+        <input type="file" id="ppic"><br><br>
+        <button onclick="ProductUpdate()">Submit</button>
+
+    </div>
+    <div id="addButton">
+        <button onclick="AddProduct()">Add</button>
+    </div>
+    <div id="productList">
+        
+    </div>
+
+    <!--Product Details-->
+    <div id="productsPage">
+        <div id="container1"></div>
+        <div id="carts"></div>
+        <div id="orderBtn">
+            <!-- <input id="pcount" placeholder="Enter Quantity"><br>
+            <button id="submit" onclick="CartItems()">Submit</button> -->
+            <button onclick="PlaceOrder()">Place Order</button>
+        </div>
+    </div>
+
+    <!--Purchase History-->
+    <div id="purchaseHistory"></div>
+</body>
+</html>
