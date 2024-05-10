@@ -11,4 +11,5 @@ public class ApplicationDBContext : DbContext
     public DbSet<CustomerDetailsData> customersinfo {get; set;}
     public DbSet<ProductData> productinfo {get; set;}
     public DbSet<PurchaseDetailsData> purchaseinfo {get; set;}
+    public DbSet<CartItems> cartinfo {get; set;}
 }

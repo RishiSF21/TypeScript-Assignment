@@ -53,6 +53,7 @@ namespace GroceryStoreAPI{
                 return NotFound(); 
             }
             _dbContext.productinfo.Remove(custom);
+            _dbContext.SaveChanges();
             return Ok();
         }
     }

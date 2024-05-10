@@ -12,4 +12,5 @@ public class CustomerDetailsData{
     public string MailID { get; set; }
     public string Password { get; set; }
     public byte[] Image { get; set; }
+    public int Balance { get; set; }
 }

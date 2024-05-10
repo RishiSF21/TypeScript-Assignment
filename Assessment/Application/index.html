@@ -19,36 +19,42 @@
         <div id="formContainer">
             <button id="signInBtn" onclick="DisplaySignIn()" class="mainBtns">Sign In</button>
             <button id="signUpBtn" onclick="DisplaySignUp()" class="mainBtns">Sign Up</button>
-            <div id="signIn">
-                <label>Email  ID : </label><br><br>
-                <input type="email" id="mail"><br><br>
-
-                <label>Password : </label><br><br>
-                <input type="password" id="password"><br><br>
-
-                <button id="loginBtn" onclick="SignIn()">Login</button>
+            <div id="bothforms">
+                <div id="signIn">
+                    <label class="loginLbl">Email  ID : </label><br><br>
+                    <input type="email" id="mail"><br><br>
+    
+                    <label class="loginLbl">Password : </label><br><br>
+                    <input type="password" id="password"><br><br>
+    
+                    <button id="loginBtn" class="sBtn" onclick="SignIn()">Login</button>
+                </div>
+                <div id="signUp">
+                    <label class="sLbl">Name : </label><br><br>
+                    <input type="text" id="name"><br><br>
+    
+                    <label class="sLbl">Email  ID : </label><br><br>
+                    <input type="email" id="signUpMail"><br><br>
+    
+                    <label class="sLbl">Password : </label><br><br>
+                    <input type="password" id="signUpPassword"><br><br>
+    
+                    <label class="sLbl">Gender : </label><br><br>
+                    <input type="text" id="signUpGender"><br><br>
+    
+                    <label class="sLbl">Mobile Number : </label><br><br>
+                    <input type="number" id="mobile"><br><br>
+    
+                    <label class="sLbl">Profile Photo : </label><br><br>
+                    <input type="file" id="profilePic"><br><br>
+    
+                    <label class="sLbl">Wallet Balance : </label><br><br>
+                    <input type="number" id="wallet"><br><br>
+    
+                    <button id="registerBtn" class="sBtn" onclick="SignUp()">Register</button>
+                </div>
             </div>
-            <div id="signUp">
-                <label>Name : </label><br><br>
-                <input type="text" id="name"><br><br>
-
-                <label>Email  ID : </label><br><br>
-                <input type="email" id="signUpMail"><br><br>
-
-                <label>Password : </label><br><br>
-                <input type="password" id="signUpPassword"><br><br>
-
-                <label>Gender : </label><br><br>
-                <input type="text" id="signUpGender"><br><br>
-
-                <label>Mobile Number : </label><br><br>
-                <input type="number" id="mobile"><br><br>
-
-                <label>Profile Photo : </label><br><br>
-                <input type="file" id="profilePic"><br><br>
-
-                <button id="registerBtn" onclick="SignUp()">Register</button>
-            </div>
+            
         </div>
     </div>
 
@@ -59,9 +65,12 @@
         <button class="navBtns" onclick="ShowProducts()">Show Products</button>
         <button class="navBtns" onclick="ProductDetails()">Buy Product</button>
         <button class="navBtns" onclick="PurchaseDetails1()">Purchase Details</button>
+        <button class="navBtns" onclick="RechargePage()">Recharge Wallet</button>
         <button class="navBtns" onclick="">Log Out</button>
     </div>
     <span id="clear"></span>
+
+    <div id="navbar-home"></div>
 
     <!--Show Products-->
    
@@ -78,7 +87,7 @@
 
     </div>
     <div id="addButton">
-        <button onclick="AddProduct()">Add</button>
+        <button onclick="AddProduct()" style="background-color: orange;">Add</button>
     </div>
     <div id="productList">
         
@@ -91,11 +100,17 @@
         <div id="orderBtn">
             <!-- <input id="pcount" placeholder="Enter Quantity"><br>
             <button id="submit" onclick="CartItems()">Submit</button> -->
-            <button onclick="PlaceOrder()">Place Order</button>
+            <button onclick="PlaceOrder()" style="background-color: orange;">Place Order</button>
         </div>
     </div>
 
     <!--Purchase History-->
     <div id="purchaseHistory"></div>
+
+    <!--Wallet Recharge-->
+    <div id="recharge">
+        <input type="number" id="amount" placeholder="Enter Recharge Amount"><br><br>
+        <button style="background-color: green; color: white;" onclick="RechargeWallet()">Recharge</button>
+    </div>
 </body>
 </html>

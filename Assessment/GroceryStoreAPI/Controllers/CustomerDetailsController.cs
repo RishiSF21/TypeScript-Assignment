@@ -43,6 +43,7 @@ namespace GroceryStoreAPI{
             index.MailID = customer1.MailID;
             index.Password = customer1.Password;
             index.Image = customer1.Image;
+            index.Balance = index.Balance;
             _dbContext.SaveChanges();
             return Ok();
         }
